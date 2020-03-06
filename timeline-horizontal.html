@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="style-timeline.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="hhttp://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="script.js">
+
+    </script>
+    <style>
+        li {
+            width: 4vw;
+            height: 4vw;
+            text-align: center;
+            line-height: 2em;
+            border-radius: 50%;
+            background: #e1251b;
+            margin: 0 5vw 0 5vw;
+            display: inline-block;
+            color: white;
+            position: relative;
+            box-shadow: 0 0 9px 1px #EE5F46;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            top: 1.88vw;
+            left: -11vw;
+            width: 11vw;
+            height: .2em;
+            background: #e1251b;
+            z-index: -1;
+        }
+
+        li:first-child::before {
+            display: none;
+        }
+
+        .active {
+            background: #cccccc;
+            box-shadow: inset 0px 0px 0px 3px #E1251B;
+            /* box-shadow: 0 0 10px #e1251b; */
+        }
+
+        .active~li {
+            background: #cccccc;
+            box-shadow:none;
+        }
+
+        .active~li::before {
+            background: #cccccc;
+        }
+
+
+        /* // Extra small devices (portrait phones, less than 576px) */
+        @media (max-width: 575.98px) {}
+
+        /* // Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) and (max-width: 767.98px) {}
+
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) and (max-width: 991.98px) {}
+
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {}
+
+        /* // Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            li {
+                width: 3vw;
+                height: 3vw;
+            }
+
+            li::before {
+                top: 1.4vw;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container p-3">
+        <div class="row">
+            <ul>
+                <li><ion-icon name="heart" style="color: white;"></ion-icon></li>
+                <li></li>
+                <li class="active"></li>
+                <li></li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+$primary: #e1251b;
+
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css";
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+
+  &:visited {
+    background-color: $primary;
+  }
+  &:active {
+    background-color: $primary;
+  }
+
+  &:focus {
+    background-color: $primary;
+    border-color: $primary;
+    box-shadow: 0 0 0 0.2rem rgba(233, 142, 142, 0.5);
+  }
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+  }
+  &:focus-within {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+.btn-outline-primary {
+  border-color: $primary;
+  color: $primary;
+
+  &:active {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+#stepProgressBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.step {
+  text-align: center;
+}
+
+.step-text {
+  margin-bottom: 10px;
+  color: #28a745;
+}
+
+.bullet {
+  border: 1px solid #cccccc;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  // color: #28a745;
+  display: inline-block;
+  position: relative;
+  transition: background-color 500ms;
+  line-height: 20px;
+  background-color: #cccccc;
+                                                                                                                                                                                                                                          
+}
+
+.bullet.finished{
+  color: white;
+background-color: #e1251b;
+border-color: #e1251b;
+box-shadow: 0 0 10px #e1251b;
+}
+
+.bullet.completed {
+  color: white;
+  background-color: #e1251b;
+  border-color: #e1251b;
+  box-shadow: 0 0 10px #e1251b;
+  &::after {
+    content: "";
+    position: absolute;
+    right: -81px;
+    bottom: 8px;
+    height: 3px;
+    width: 84px;
+    background-color: $primary;
+  }
+}
+
+// for progress bar completion
+// .bullet.completed::after {
+// 	content: '';
+// 	position: absolute;
+// 	right: -60px;
+// 	bottom: 10px;
+// 	height: 3px;
+// 	width: 54px;
+//   background-color: #E1251B;
+
+// }
+
+/* Base styles and helper stuff */
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 5px 10px;
+  border: 1px solid black;
+  transition: 250ms background-color;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+button:disabled:hover {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 40px;
+}
