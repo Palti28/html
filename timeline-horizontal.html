@@ -1,102 +1,179 @@
 <!DOCTYPE html>
 
 <head>
-    <!-- <link rel="stylesheet" type="text/css" href="style-timeline.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="hhttp://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <script src="script.js">
+  <!-- <link rel="stylesheet" type="text/css" href="style-timeline.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    </script>
-    <style>
-        li {
-            width: 4vw;
-            height: 4vw;
-            text-align: center;
-            line-height: 2em;
-            border-radius: 50%;
-            background: #e1251b;
-            margin: 0 5vw 0 5vw;
-            display: inline-block;
-            color: white;
-            position: relative;
-            box-shadow: 0 0 9px 1px #EE5F46;
-        }
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
-        li::before {
-            content: "";
-            position: absolute;
-            top: 1.88vw;
-            left: -11vw;
-            width: 11vw;
-            height: .2em;
-            background: #e1251b;
-            z-index: -1;
-        }
+  <style>
+    li {
+      width: 4vw;
+      height: 4vw;
+      text-align: center;
+      line-height: 2em;
+      border-radius: 50%;
+      background: #e1251b;
+      margin: 0 5vw 0 5vw;
+      display: inline-block;
+      color: white;
+      position: relative;
+      box-shadow: 0 0 9px 1px #EE5F46;
+    }
 
-        li:first-child::before {
-            display: none;
-        }
+    li::before {
+      content: "";
+      position: absolute;
+      top: 1.88vw;
+      left: -11vw;
+      width: 11vw;
+      height: .2em;
+      background: #e1251b;
+      z-index: -1;
+    }
 
-        .active {
-            background: #cccccc;
-            box-shadow: inset 0px 0px 0px 3px #E1251B;
-            /* box-shadow: 0 0 10px #e1251b; */
-        }
+    li:first-child::before {
+      display: none;
+    }
 
-        .active~li {
-            background: #cccccc;
-            box-shadow:none;
-        }
+    .active {
+      background: #cccccc;
+      box-shadow: inset 0px 0px 0px 3px #E1251B;
+      /* box-shadow: 0 0 10px #e1251b; */
+    }
 
-        .active~li::before {
-            background: #cccccc;
-        }
+    .active~li {
+      background: #cccccc;
+      box-shadow: none;
+    }
+
+    .active~li::before {
+      background: #cccccc;
+    }
+
+    .header {}
+
+    .econfirmation {
+      border-radius: 8px;
+      border-top: 8px solid #E1251B;
+    }
+
+    .receiver-name span {
+      font-weight: bolder;
+    }
+
+    .font-small {
+      font-size: smaller;
+    }
+
+    .clear {
+      border: 1px solid black;
+    }
 
 
-        /* // Extra small devices (portrait phones, less than 576px) */
-        @media (max-width: 575.98px) {}
+    .econfirmation-footer .contact img {
+      width: 24px;
+    }
 
-        /* // Small devices (landscape phones, 576px and up) */
-        @media (min-width: 576px) and (max-width: 767.98px) {}
+    .econfirmation-footer .contact {
+      font-weight: bold;
+      color: #E1251B;
+      display: flex;
+    }
 
-        /* // Medium devices (tablets, 768px and up) */
-        @media (min-width: 768px) and (max-width: 991.98px) {}
 
-        /* // Large devices (desktops, 992px and up) */
-        @media (min-width: 992px) and (max-width: 1199.98px) {}
+    /* // Extra small devices (portrait phones, less than 576px) */
+    @media (max-width: 575.98px) {
+      .econfirmation{
+        border: none;
+      }
+    }
 
-        /* // Extra large devices (large desktops, 1200px and up) */
-        @media (min-width: 1200px) {
-            li {
-                width: 3vw;
-                height: 3vw;
-            }
+    /* // Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) and (max-width: 767.98px) {}
 
-            li::before {
-                top: 1.4vw;
-            }
+    /* // Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) and (max-width: 991.98px) {}
 
-        }
-    </style>
+    /* // Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) and (max-width: 1199.98px) {}
+
+    /* // Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      li {
+        width: 3vw;
+        height: 3vw;
+      }
+
+      li::before {
+        top: 1.4vw;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="container p-3">
-        <div class="row">
-            <ul>
-                <li><ion-icon name="heart" style="color: white;"></ion-icon></li>
-                <li></li>
-                <li class="active"></li>
-                <li></li>
+  <div class="container-sm p-3">
+    <div class="row">
+      <ul>
+        <li></li>
+        <li></li>
+        <li class="active"></li>
+        <li></li>
 
-            </ul>
+      </ul>
+      <div class="col-sm-12 col-md-10 col-lg-8 m-auto">
+        <div class="econfirmation card py-3 px-3">
+          <div class="card-body">
+            <div class="header mb-5">
+              <img class="mb-4" src="Logo-Doku.png" style="width: 4rem;" />
+              <h2> Refund Coda Shop</h2>
+            </div>
+            <div class="card-text">
+              <div class="receiver-name">
+                Hi <span>Budi Budiman, </span>
+              </div>
+              Anda menerima refund dari Codashop atas transaksi berikut:
+              <div class="card  my-4">
+                <div class="card-body">
+                  <h6 class="font-small">Order ID #192879</h6>
+
+                  <h4>Mobile Legend Voucher</h4>
+                  <h4>Rp 150.000</h4>
+                </div>
+              </div>
+              Dengan menekan tombol dibawahanjutkan proses refund dengan menentukan kemana kami akan
+              transfer uang anda:
+            </div>
+            <div class="econfirmation-action my-4">
+              <div class="btn btn-success ">
+                REFUND
+              </div>
+            </div>
+            <div class="clear"> </div>
+            <div class="econfirmation-footer my-3">
+              Should you need any further information, please do not hesitate to contact us
+
+
+              <div class="contact mt-4">
+                <div class="mail mr-3">
+                  <img src="https://img.icons8.com/ios/50/000000/important-mail.png" /> care@doku.com
+                </div>
+                <div class="phone">
+                  <img src="https://img.icons8.com/ios/50/000000/phone.png" /> (021) 1500963
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>

@@ -1,0 +1,87 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+    a{
+        outline: 0 !important;
+        text-decoration: none;
+    }
+}
+
+body{
+    
+    a{
+        outline: 0 !important;
+    }
+}
+
+span{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+}
+
+.kt-user-card{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    .kt-user-card__pic{
+        padding-right: .5rem;
+    
+        img{
+            border-radius: 50%;
+            max-width: 40px;
+            max-height: 40pxs;
+        }
+    }
+
+    .kt-user-card__details{
+        line-height: 0;
+
+        .kt-user-card__name{
+            display: block;
+            font-size: 1rem;
+            font-weight: bolder;
+            line-height: 1rem;
+            transition: color .3s ease;
+            color: rgb(27, 27, 27);
+        }
+
+        .kt-user-card__desc{
+            margin-top: 3px;
+            display: inline-block;
+            font-size: .9rem;
+            line-height: 1rem;
+            font-weight: 400;
+            color: orangered;
+        }
+    }
+}
+
+// .test{
+//     height: 100px;
+//     border: 1px solid black;
+//     width: 100px;
+//     display: block;
+
+//     .test__element{
+//         background-color: palegreen;
+//     }
+
+//     .test--modifier{
+//         background-color: black
+//     }
+// }
+
+// .bg--primary{
+//     background-color:darkcyan;
+//     border: 1px solid blue;
+
+// }
